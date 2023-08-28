@@ -17,7 +17,7 @@ Neljä oleellista vapautta vapaassa ohjelmistossa ovat:
     - Vapaus tutkia ja muokata, edellyttäen pääsyä lähdekoodiin.
     - Vapaus jakaa muuttamattomia ja muokattuja kopioita.
     - Vapaus jakaa muokattuja versioita.
-Kaupallinen käyttö, kehitys ja jakelu ovat sallittuja vapaalle ohjelmistolle. "Avoin lähdekoodi" eroaa filosofialtaan, mutta usein se menee päällekkäin vapaan ohjelmiston kanssa. Vapaan ohjelmiston lisenssit, kuten copyleft, suojaavat näitä vapauksia. Tietyt säännöt jakelusta ja paketoinnista ovat hyväksyttäviä, mutta keskeisiä vapauksia ei saa kieltää. Vientirajoitukset, lailliset näkökohdat ja sopimukseen perustuvat lisenssit ovat huomioitavia asioita.
+
 
 # a) Linuxin asennus virtuaalikoneeseen
 
