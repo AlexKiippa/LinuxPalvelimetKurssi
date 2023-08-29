@@ -50,5 +50,5 @@ Seuraava vaihe olikin luoda repository jonne oli mahdollista luoda raportti kurs
 
 
 
-## LÄhteet:
+## Lähteet:
 https://terokarvinen.com/2023/linux-palvelimet-2023-alkusyksy/#h1-virtuaali-linux
