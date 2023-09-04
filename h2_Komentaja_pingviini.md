@@ -8,11 +8,13 @@
 
 ## a) Micro
  Micron asennus onnistui komennolla "curl https://getmic.ro | bash
+ 
 <img width="407" alt="Micro install" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/1b696142-5a2f-48b8-a127-04580db9f9a9">
 
 ## b) Rauta
 
 lshw asennus onnistui komennolla " sudo apt install lshw-gtk"
+
 <img width="377" alt="lshw install" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/8ed215c7-9cdb-49f5-9dac-44b226de9331">
 
 Komento "sudo lshw -short -sanitize" listaa lyhyen ja sensoroidun yhteenvedon laitteiston tiedoista. 
