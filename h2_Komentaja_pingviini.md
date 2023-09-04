@@ -69,6 +69,8 @@ Midnight Commander on tekstipohjainen tiedostonhallintaohjelma, joka tarjoaa mon
    
 2. **/home/**
 
+Tämä hakemisto sisältää kotihakemistot kaikille järjestelmän käyttäjille.
+
 <img width="191" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/2c12cbf5-ab4b-47ff-a5f2-f9d52e10647e">
 
 3. **/etc/** (Järjestelmän asetukset)
@@ -103,7 +105,7 @@ Komento "grep -v rivi kissa.txt" luettelee sen sijaan kaikki rivit jossa sana "r
 <img width="417" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/6bab6e43-b871-4524-9557-1185e0857e19">
 
 
-## Pipe
+## f) Pipe
 
 Kuinka monta kertaa tietty sana esiintyy tiedostossa. '**grep**'-komento tulostaa rivit jossa sana esiintyy ja sen voi putkea '**wc**'-komennon syötteeseen (word count).
 Eli kun komento 'grep rivi kissa.txt | wc -l' syötetään grep komento putkea tulosteen word countteriin joka laskee sanojen määrän tiedostossa.
