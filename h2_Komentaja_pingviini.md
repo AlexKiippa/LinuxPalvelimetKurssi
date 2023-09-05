@@ -114,7 +114,12 @@ Eli kun komento 'grep rivi kissa.txt | wc -l' syötetään grep komento putkea t
 
 ## g) Tukki
 
+Onnistunut suoritus lokin avaamisesta.
 
+<img width="653" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/eecba3bf-70c0-460d-a61f-246fafd78830">
+
+Kolme kertaa väärä salasana. Epäonnistunut yritys avata lokia
+<img width="862" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/98aa0497-fa32-4f75-afc5-85847e54393b">
 
 ## Lähteet:
 https://terokarvinen.com/2023/linux-palvelimet-2023-alkusyksy/#h1-virtuaali-linux
