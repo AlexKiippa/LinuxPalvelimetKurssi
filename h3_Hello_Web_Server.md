@@ -43,7 +43,7 @@ Kuvankaappauksessa sivu kertookin, että tämä Apache2 Debian oletussivu ja siv
 Lokiin päästiin hakemistosta
 > $ cd var/log/
 Ja komennolla
-> sudo cat apache2/access.log
+> $ sudo cat apache2/access.log
 
 <img width="926" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/a9868d0f-866f-4134-a5fb-400e93b16d9b">
 
@@ -57,9 +57,22 @@ Ja komennolla
 - "-" "Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0": Käytetty selain ja sen versio.
 
 ## c)
+Esimerkkisivu löytyy hakemistosta 'var/www/html/index.html'
+Tiedosta ei pysty teksiteditorilla muokata joten se pitää suorittaa terminaalin kautta. Esimerkki komento jolla voidaan haluamansa teksti tiedostoon joka näkyy kotisivulla:
+> $ echo moikka|sudo tee /var/www/html/index.html
+<img width="377" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/101c5683-e9f1-42d6-be20-2609aa4866f3">
+
+Kuvassa olin jo hakemistossa joten jätin tiedoston juurihakemistot pois komennosta.
+Sitten avattiin kotisivu ja katsottiin tuliko annettu teksti näkyviin kotisivulle.
+> $ firefox localhost
+<img width="349" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/1c8754ec-614b-4c3b-b061-2aca4afaf505">
+
+## d)
 
 
-<img width="470" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/ba45d81a-c7e1-42dc-8374-ca0e691977f9">
+
+
+
 
 
 
