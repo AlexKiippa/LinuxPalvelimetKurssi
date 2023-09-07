@@ -22,6 +22,7 @@ Näillä ohjeilla sinulla on Apache asennettu ja käyttäjän kotisivut laitettu
 ## a)
 Apachen asennus onnistuu komennolla:
 > $ sudo apt-get install apache2
+
 Apache oli jo entuudestaan asennettu tunnilla käydyn esimerkin ansiosta niin tämä komento ei asentanut, mitään uutta tällä kertaa.
 <img width="368" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/65f23f30-e8c5-4c81-8a91-b9a5923811bf">
 
