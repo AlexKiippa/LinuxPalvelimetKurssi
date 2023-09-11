@@ -69,11 +69,7 @@ Sitten avattiin kotisivu ja katsottiin tuliko annettu teksti näkyviin kotisivul
 
 ## d)
 
-Käyttäjien kotisivua en saanut toimimaan eli osoitteessa: "http://example.com/~alexk" näkyy tällainen sivu:
-
-<img width="537" alt="Domain" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/e3144529-80af-4d6d-8f81-00b916d1d413">
-
-Loin hakemistoon: /alexk/public_html/index_html tiedoston.
+Ensin Loin hakemistoon: /alexk/public_html/index_html tiedoston.
 Ja tein simppelin html pohjan.
 
 <img width="413" alt="EsimSivut" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/a0cf9d69-7816-4990-8a8d-d4a52c9c1f6e">
@@ -87,11 +83,10 @@ Ja käynnistin Apachen uudelleen:
 > $ sudo systemctl restart apache2
 <img width="323" alt="apache rest" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/737f8ebe-aaba-400f-a615-b176c7c45f53">
 
-Tarkistin myös, että user.conf tiedostossa on rivi "Userdir public_html"
+Sitten menin sivulle "localhost/~alexk" ja sivu näytti tältä:
 
-<img width="308" alt="Apachekonfikuraatio" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/252b6052-5c08-47af-bc2e-1164d1326e5b">
+<img width="305" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/2c439cf3-73f1-4bde-928f-3ae3400b4efe">
 
-Muutama muukin ongelman ratkaisu toiminto jota yritin tähän käyttäjien kotisivujen päälle laittamiseen ei toiminut jota en muistanut dokumentoida, sillä ne eivät auttaneet.
 
 ## e)
 Validi HTML5 sivu tuli jo aikaisempaa tehtävää varten tehtyä, joten käytin sivua "validator.w3.org" tarkastamaan, että sivu oli oikeasti validi.
