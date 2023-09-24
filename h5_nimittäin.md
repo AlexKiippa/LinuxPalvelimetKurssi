@@ -86,6 +86,78 @@ Ja loin DNS recordin domainille:
 <img width="922" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/87ea2143-d7f8-4eb1-9825-a46e2472b080">
 
 
+Sivusto näytti vielä tätä, mutta DNS muutokset voivat kuulemma viedä muutaman tunnin.
+
+<img width="711" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/37931008-a707-4517-9c36-5840be50a46d">
+
+## b)
+
+### Host- komento
+
+> $ host alex-kiippa.com
+
+Tässä näemme, että alex-kiippa.wiki-verkkotunnus vastaa IP-osoitteeseen 162.255.119.93.
+
+<img width="312" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/e880dfd7-50df-4cd6-bbeb-e7ad1c2baf52">
+
+### Dig- komento
+
+Ensin asennus
+
+> sudo apt-get update
+
+> sudo apt-get install dnsutils
+
+Sitten dig komento verkkotunnukselle.
+
+> $ dig alex-kiippa.wiki
+
+<img width="368" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/f57cd186-3915-4f30-953e-abef9f58f1c5">
+
+Käyttäjä antoi komennon 'dig alex-kiippa.wiki' tiedustellakseen DNS-tietoja kyseisestä verkkotunnuksesta.
+
+Palvelin, johon kysely lähetettiin, vastasi NOERROR-tilassa, mikä tarkoittaa, että kysely onnistui ilman virheitä.
+
+Kyselyssä oli yksi kysymys (QUERY), ja siinä tiedusteltiin verkkotunnuksen "alex-kiippa.wiki" A-tietuetta (IPv4-osoitetta).
+
+Vastauksessa oli yksi vastauksen osa (ANSWER), joka sisältää verkkotunnuksen "alex-kiippa.wiki" A-tietueen. Tämä tarkoittaa, että "alex-kiippa.wiki" vastaa IP-osoitteeseen 162.255.119.93.
+
+Kyselyyn liittyi myös OPT PSEUDOSECTION, joka sisältää tietoa EDNS-versiosta ja asetuksista, mutta se ei ole tärkeä tässä yhteydessä.
+
+Kysely kesti 4 millisekuntia suorittaa.
+
+Palvelin, joka antoi vastauksen, oli IP-osoitteessa 67.207.67.2, ja se vastasi DNS-kyselyyn UDP-protokollalla portissa 53.
+
+Tämä vastaus osoittaa, että verkkotunnus "alex-kiippa.wiki" vastaa IP-osoitteeseen 162.255.119.93, ja kysely sujui ilman ongelmia.
+
+## c) 
+
+
+Seuraavaksi muodostettiin yhteys serverille
+> $ ssh alexk@206.189.98.149
+
+<img width="368" alt="LogIN_6" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/8616abd4-2f71-45c9-b9f6-70e786c6238c">
+
+Loin simppelin HTMl tiedoston ja hakemiston.
+> $ sudo nano /var/www/alex-kiippa.wiki/index.html
+
+Tämän jälkeen loin virtual host conf tiedoston.
+> sudo nano /etc/apache2/sites-available/alex-kiippa.wiki.conf
+<img width="402" alt="Conf7" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/24ab4e71-1efa-464e-9be4-4a37ff47b589">
+
+Conf tiedoston sisältö näytti tältä:
+
+<img width="398" alt="VirtualHOst" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/414dcf8c-5ee8-434f-b34e-85d7f48fb7bf">
+
+Lopuksi virtual hostin enable ja reload apache
+> $ sudo a2ensite alex-kiippa.wiki.conf
+
+> $ sudo systemctl reload apache2
+
+
+Sivusto näytti vielä tätä, mutta DNS muutokset voivat kuulemma viedä muutaman tunnin.
+
+<img width="711" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/37931008-a707-4517-9c36-5840be50a46d">
 
 
 ## Lähteet
