@@ -1,5 +1,36 @@
 #H5 Nimittäin
 
+## x)
+
+###  New Default Website with Apache2
+
+
+Tämä opastus näyttää, kuinka luoda perusverkkosivusto Apache2-palvelimelle:
+
+1. Asenna Apache: sudo apt-get install apache2.
+2. Poista oletussivu käytöstä: sudo a2dissite 000-default.conf.
+3. Luo mukautettu VirtualHost-määritys: /etc/apache2/sites-available/tero.conf.
+4. Ota mukautettu VirtualHost käyttöön: sudo a2ensite tero.conf.
+5. Käynnistä Apache uudelleen: sudo service apache2 restart.
+6. Luo yksinkertainen HTML-kotisivu osoitteeseen /home/tero/public_html/index.html.
+7. Avaa verkkosivusto osoitteessa http://localhost.
+
+### Name Based Virtual Hosts on Apache
+
+1. Asenna Apache-verkkopalvelin: sudo apt-get -y install apache2.
+2. Luo uusi nimeen perustuva virtuaalihostaus.
+3. Luo verkkosivu tavallisena käyttäjänä.
+4. Testaa sivusto curl-komennolla.
+5. Simuloi nimen palvelua lisäämällä /etc/hosts-tiedostoon.
+6. Testaa sivusto selaimella osoitteissa http://localhost ja http://nimesi.example.com.
+7. Tämä mahdollistaa useiden verkkosivustojen isännöinnin samalla IP-osoitteella Apache-verkkopalvelimella.
+
+### Name-based Virtual Host Support
+
+
+Nimipohjaisessa virtuaalihostauksessa useat verkkotunnukset voivat jakaa saman IP-osoitteen, mikä säästää IP-osoitteiden käyttöä ja tekee konfiguroinnista yksinkertaisempaa. Jokainen verkkotunnus määritellään <VirtualHost> -lohkossa, joka sisältää ServerName- ja DocumentRoot-ohjeet. Oletusvirtuaalihosti käsittelee pyyntöjä, jotka eivät vastaa muihin määriteltyihin virtuaalihosteihin. On suositeltavaa aina määrittää ServerName jokaiselle virtuaalihostille, ja voit lisätä muita nimiä ServerAlias-ohjeella. Nimipohjaisten virtuaalihostien järjestys määräytyy niiden esiintymisjärjestyksen perusteella, ja ensimmäinen sopiva ServerName tai ServerAlias otetaan käyttöön.
+
+
 ## a) 
 
 Sivulla "NameCheap.com" kirjoitin haluamani domain-nimen hakukenttään
@@ -55,6 +86,12 @@ Ja loin DNS recordin domainille:
 <img width="922" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/87ea2143-d7f8-4eb1-9825-a46e2472b080">
 
 
+
+
+## Lähteet
+https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
+https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+https://terokarvinen.com/2016/02/16/new-default-website-with-apache2-show-your-homepage-at-top-of-example-com-no-tilde/
 
 
 
