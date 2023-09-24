@@ -57,26 +57,7 @@ Advance DNS tabissa muokkasin tiedot siten, että sijoitin ip osoitteen jolla se
 <img width="537" alt="5" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/404ba56f-bf99-44c4-8bf3-c30e85134b7f">
 
 
-Seuraavaksi muodostettiin yhteys serverille
-> $ ssh alexk@206.189.98.149
 
-<img width="368" alt="LogIN_6" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/8616abd4-2f71-45c9-b9f6-70e786c6238c">
-
-Loin simppelin HTMl tiedoston ja hakemiston.
-> $ sudo nano /var/www/alex-kiippa.wiki/index.html
-
-Tämän jälkeen loin virtual host conf tiedoston.
-> sudo nano /etc/apache2/sites-available/alex-kiippa.wiki.conf
-<img width="402" alt="Conf7" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/24ab4e71-1efa-464e-9be4-4a37ff47b589">
-
-Conf tiedoston sisältö näytti tältä:
-
-<img width="398" alt="VirtualHOst" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/414dcf8c-5ee8-434f-b34e-85d7f48fb7bf">
-
-Lopuksi virtual hostin enable ja reload apache
-> $ sudo a2ensite alex-kiippa.wiki.conf
-
-> $ sudo systemctl reload apache2
 
 Lisäsin myös domain nimen DigitalOcean sivuille.
 <img width="905" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/b1bd4de9-ada7-47f6-9478-ca2c65d35905">
@@ -86,9 +67,10 @@ Ja loin DNS recordin domainille:
 <img width="922" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/87ea2143-d7f8-4eb1-9825-a46e2472b080">
 
 
-Sivusto näytti vielä tätä, mutta DNS muutokset voivat kuulemma viedä muutaman tunnin.
+Sivusto tuli muutaman hetken päästä näkyviin.
 
-<img width="711" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/37931008-a707-4517-9c36-5840be50a46d">
+<img width="400" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/4f8c2cdc-6462-45e7-aa9c-cdadf269a84c">
+
 
 ## b)
 
@@ -155,10 +137,9 @@ Lopuksi virtual hostin enable ja reload apache
 > $ sudo systemctl reload apache2
 
 
-Sivusto näytti vielä tätä, mutta DNS muutokset voivat kuulemma viedä muutaman tunnin.
+Omalla selaimella sivu näytti vieläkin samaa sivua mitä a) tehtävässä, mutta kännykällä toimi uusi sivu.
 
-<img width="711" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/37931008-a707-4517-9c36-5840be50a46d">
-
+![IMG_6298](https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/3dd45297-25d4-4dce-a129-810272f2ff87)
 
 ## Lähteet
 https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
