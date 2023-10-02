@@ -1,4 +1,29 @@
+# x)
 
+## Palvelinpään weppiohjelmoinnin edut
+- Webbi-sovellus toimii jokaisella järjestelmällä ja asentamatta mitään.
+- Käytät aina uusinta versiota
+- Web-sovellus kerää tietoa itsestään miten sitä käytetään
+
+## Django 4 Instant Customer Database Tutorial
+- Asenna Linux ja varmista yhteensopivuus.
+- Luo virtuaaliympäristö ja aktivoi se.
+- Asenna Django ja muut riippuvuudet.
+- Luo Django-projekti ja käynnistä kehityspalvelin.
+- Hallitse projekteja admin-käyttöliittymässä.
+- Varmista tietokannan toiminta ja luo admin-käyttäjä.
+- Mukauta mallien näyttöä tarvittaessa
+
+## Deploy Django 4 - Production Install
+- Päivitä pakettien metatiedot: sudo apt-get update
+- Asenna Apache-palvelin: sudo apt-get -y install apache2
+- Luo uusi Django-projekti.
+- Lisää projektillesi Apache-konfiguraatio tiedostoon /etc/apache2/sites-available/teroco.conf. Muista mukauttaa tiedostopolut.
+- Ota uusi verkkosivusto käyttöön ja poista tarpeettomat.
+- Asenna Apache WSGI -moduuli: sudo apt-get -y install libapache2-mod-wsgi-py3
+- Käynnistä Apache uudelleen: sudo systemctl restart apache2
+- Tarkista, että Apache palvelee Django-projektiasi selaimessa.
+Näillä ohjeilla saat Django-websovelluksen toimimaan Apache-palvelimen kanssa Linuxissa
 
 # a)
 
@@ -97,20 +122,61 @@ Admin-liittymässä näkyy users kohta josta onkin sitten mahdollista lisälläi
 # c)
 
 
-### Asennetaan mod_wsgi
+### Asennetaan virtualenv ja luodaan uusi VirtualEnv
 
->$ pip install mod_wsgi
+>$ sudo apt-get -y install virtualenv 
 
-<img width="419" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/78cf7932-80d1-4963-ae1e-1e6c699cf0d9">
+>$ cd publicwsgi/
 
-### Määritellään Apache-virtuaalipalvelin
+>$ virtualenv -p python3 --system-site-packages env
 
-Luodaan Apache-virtuaalipalvelinmääritystiedosto, joka ohjaa HTTP-pyynnöt Django-sovelluksellesi.
->$ nano /etc/apache2/sites-availabe/linuxpalvelimet.conf
+<img width="418" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/b00c811f-3e19-467d-b41e-941d2ae0b8ff">
 
-Tiedoston sisältö: 
+### Asennetaan Django virtualEnv:iin
 
-<img width="452" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/db0f1a8b-5100-40cf-80ed-51796a8c14a3">
 
-### Aktivoidaan virtuaalipalvelin ja käynnistetään Apache.
+Hypätään virtualenv:n
+
+>$ source env/bin/activate
+
+Luodaan teksitiedosto jossa lukee "django" ja ladataan Django sen kautta
+
+>$ micro requirements.txt
+
+>$ pip install -r requirements.txt
+
+<img width="383" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/ff742a72-1652-4af6-b97a-172387656a75">
+
+### Uusi Django projekti
+
+Muokataan alexco.conf tiedosto
+
+>$ sudoedit /etc/apache2/sites-available/alexco.conf
+
+<img width="523" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/caa749e9-fc38-434f-8a86-9a95e16f0ee4">
+
+Sitten asennetaan **WSGI** moduuli
+>$ sudo apt-get -y install libapache2-mod-wsgi-py3
+
+Tsekataan .conf tiedosto config testillä
+
+>$ /sbin/apache2ctl configtest
+
+
+<img width="369" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/99b77caa-055b-4b71-9a5c-d027cb967357">
+
+**Syntax OK**
+
+Käynnistetään apache uudelleen ja katsotaan miltä localhost näyttää:
+
+>$ sudo systemctl restart apache2
+
+<img width="315" alt="image" src="https://github.com/AlexKiippa/LinuxPalvelimetKurssi/assets/98153476/bcb45917-840f-4ed1-9403-73e6b5a2856a">
+
+localhost ei näyttänyt hyvältä ja monen tunnin korjailun jälkeen saanut sivua näkymään..
+
+
+
+
+
 
